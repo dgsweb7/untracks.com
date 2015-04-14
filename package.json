@@ -4,7 +4,8 @@
   "description": "Untrack.mobi (Identify your unfollow users from twitter)",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node server.js",
+    "debug": "nodemon server.js",
     "test": "node_modules/mocha/bin/mocha tests/*"
   },
   "author": "",
