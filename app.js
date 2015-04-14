@@ -17,7 +17,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', routes);
 
-var server = app.listen(8080, function () {
+var server = app.listen(8080, '127.0.0.1', function () {
 
   var host = server.address().address;
   var port = server.address().port;
