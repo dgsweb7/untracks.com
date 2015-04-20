@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
-var host = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
+var host = process.env.OPENSHIFT_NODEJS_IP;
 var port =  parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080;
 var routes = require('./routes');
 
