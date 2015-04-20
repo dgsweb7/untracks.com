@@ -4,7 +4,7 @@ var router = express.Router();
 var UsersController = require('../controller/UsersController');
 var UtilController = require('../controller/UtilController');
 
-router.get('/deploy', UtilController.update.bind());
+router.post('/deploy', UtilController.update.bind());
 router.get('/users', UsersController.findAll.bind(UsersController));
 router.get('/users/:_id', UsersController.findOne.bind(UsersController));
 router.post('/users', UsersController.create.bind(UsersController));
