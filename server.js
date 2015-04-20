@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
-
+var host = process.env.OPENSHIFT_NODEJS_IP;
+var port =  parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080;
 var routes = require('./routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,7 +18,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', routes);
 
-var server = app.listen(8080, '127.0.0.1', function () {
+var server = app.listen(port, host, function () {
 
   var host = server.address().address;
   var port = server.address().port;

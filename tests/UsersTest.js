@@ -1,6 +1,6 @@
 var request = require('supertest'),
     assert  = require('assert'),
-    app     = require('../app'),
+    app     = require('../server'),
     db      = require('../db/mongo'),
     item, _id;
 
